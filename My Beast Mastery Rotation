@@ -1,0 +1,30 @@
+function()
+    -- Define spell IDs in priority order
+    local spell1 = 19574  -- Highest priority
+    local spell2 = 359844
+    local spell3 = 466930
+    local spell4 = 217200
+    local spell5 = 120679
+    local spell6 = 34026
+    local spell7 = 193455  -- Lowest priority
+
+    -- Check if each spell is usable (enough resources, no cooldown)
+    if IsUsableSpell(spell1) and GetSpellCooldown(spell1) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_1"  -- Icon path for spell 1
+    elseif IsUsableSpell(spell2) and GetSpellCooldown(spell2) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_2"  -- Icon path for spell 2
+    elseif IsUsableSpell(spell3) and GetSpellCooldown(spell3) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_3"  -- Icon path for spell 3
+    elseif IsUsableSpell(spell4) and GetSpellCooldown(spell4) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_4"  -- Icon path for spell 4
+    elseif IsUsableSpell(spell5) and GetSpellCooldown(spell5) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_5"  -- Icon path for spell 5
+    elseif IsUsableSpell(spell6) and GetSpellCooldown(spell6) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_6"  -- Icon path for spell 6
+    elseif IsUsableSpell(spell7) and GetSpellCooldown(spell7) == 0 then
+        return true, "Interface\\Icons\\Spell_Icon_7"  -- Icon path for spell 7
+    end
+
+    -- Fallback icon when no spells are available
+    return true, "Interface\\Icons\\Spell_Nature_WispSplode"  -- Fallback icon path
+end
