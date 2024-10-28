@@ -1,0 +1,28 @@
+function()
+    local spell1 = 19574  -- Highest priority
+    local spell2 = 359844
+    local spell3 = 466930
+    local spell4 = 217200
+    local spell5 = 120679
+    local spell6 = 34026
+    local spell7 = 193455  -- Lowest priority
+
+    if IsUsableSpell(spell1) and GetSpellCooldown(spell1) == 0 then
+        return GetSpellInfo(spell1)  -- Returns the name of spell 1
+    elseif IsUsableSpell(spell2) and GetSpellCooldown(spell2) == 0 then
+        return GetSpellInfo(spell2)  -- Returns the name of spell 2
+    elseif IsUsableSpell(spell3) and GetSpellCooldown(spell3) == 0 then
+        return GetSpellInfo(spell3)  -- Returns the name of spell 3
+    elseif IsUsableSpell(spell4) and GetSpellCooldown(spell4) == 0 then
+        return GetSpellInfo(spell4)  -- Returns the name of spell 4
+    elseif IsUsableSpell(spell5) and GetSpellCooldown(spell5) == 0 then
+        return GetSpellInfo(spell5)  -- Returns the name of spell 5
+    elseif IsUsableSpell(spell6) and GetSpellCooldown(spell6) == 0 then
+        return GetSpellInfo(spell6)  -- Returns the name of spell 6
+    elseif IsUsableSpell(spell7) and GetSpellCooldown(spell7) == 0 then
+        return GetSpellInfo(spell7)  -- Returns the name of spell 7
+    end
+
+    -- Fallback text if no spells are available
+    return "No Spells Available"
+end
